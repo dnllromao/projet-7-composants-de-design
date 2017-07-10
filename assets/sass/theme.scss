@@ -1,0 +1,49 @@
+$padding: 1em;
+
+div[class^="col"] {
+	float: left;
+	padding-left: $padding;
+
+	input {
+		width: 100%;
+	}
+}
+
+.col-1 {
+	clear: both;
+	width: 100%;
+}
+.col-2 {
+	width: calc(100%/2 - #{$padding});
+}
+
+.inline {
+	display: inline-block;
+	vertical-align: top;
+}
+
+form {
+
+	label {
+		display: block;
+		font-weight: bold;
+	}
+
+	select {
+		width: 100%;
+	}
+
+	.row:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.input-date .inline > input {
+		width: 30px;
+	}
+	.input-date .inline:last-child > input {
+		width: 60px;
+	}
+
+}
+

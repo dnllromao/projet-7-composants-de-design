@@ -1,0 +1,32 @@
+div[class^="col"] {
+  float: left;
+  padding-left: 1em; }
+  div[class^="col"] input {
+    width: 100%; }
+
+.col-1 {
+  clear: both;
+  width: 100%; }
+
+.col-2 {
+  width: calc(100%/2 - 1em); }
+
+.inline {
+  display: inline-block;
+  vertical-align: top; }
+
+form label {
+  display: block;
+  font-weight: bold; }
+form select {
+  width: 100%; }
+form .row:after {
+  content: '';
+  display: block;
+  clear: both; }
+form .input-date .inline > input {
+  width: 30px; }
+form .input-date .inline:last-child > input {
+  width: 60px; }
+
+/*# sourceMappingURL=theme.css.map */
