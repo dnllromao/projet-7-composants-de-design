@@ -10,20 +10,21 @@
 		<h3>Emergency Contact and Medical Information</h3>
 		<hr/>
 
-		<div>
-			<div>
+		<div class="row">
+			<div class="col-2">
 				<label>Name</label>
 				<div class="inline">
 					<input type="text">
-					<p>First</p>
+					<span>First</span>
 				</div>
 				<div class="inline">
 					<input type="text">
-					<p>Last</p>
+					<span>Last</span>
 				</div>
 			</div>
 		</div>
-		<div>
+
+		<div class="row">
 			<div class="col-2">
 				<label>Gender</label>
 				<select>
@@ -34,17 +35,17 @@
 				<label>Date of birth</label>
 				<div class="inline">
 					<input type="text" maxlength="2">
-					<p>MM</p>
+					<span>MM</span>
 				</div>
 				<span class="inline">/</span>
 				<div class="inline">
 					<input type="text" maxlength="2">
-					<p>DD</p>
+					<span>DD</span>
 				</div>
 				<span class="inline">/</span>
 				<div class="inline">
 					<input type="text" maxlength="4">
-					<p>YYYY</p>
+					<span>YYYY</span>
 				</div>
 			</div>
 		</div>
@@ -52,88 +53,136 @@
 		<hr/>
 
 		<h4>Emergency Contact</h4>
-		<div>
+		<div class="row">
 			<div class="col-2">
 				<label>Name</label>
 				<div class="inline">
 					<input type="text">
-					<p>First</p>
+					<span>First</span>
 				</div>
 				<div class="inline">
 					<input type="text">
-					<p>Last</p>
+					<span>Last</span>
 				</div>
 			</div>
 			<div class="col-2">
 				<label>Relationship</label>
 				<input type="text">
 			</div>
-			<div class="row">
-				<div class="col-1">
-					<label>Address</label>
-					<input type="text">
-					<p>Street Address</p>
-					<input type="text">
-					<p>Address Line 2</p>
+		</div>
+
+		<div class="row">
+			<div class="col-1">
+				<label>Address</label>
+				<input type="text">
+				<span>Street Address</span>
+			</div>
+			<div class="col-1">
+				<input type="text">
+				<span>Address Line 2</span>
+			</div>
+			<div class="col-2">
+				<input type="text">
+				<span>City</span>
+			</div>
+			<div class="col-2">
+				<input type="text">
+				<span>State / Province / Region</span>
+			</div>
+			<div class="col-2">
+				<input type="text">
+				<span>Postal / Zip Code</span>
+			</div>
+			<div class="col-2">
+				<select></select>
+				<span>Country</span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-2 input-date">
+				<label>Home Phone</label>
+				<div class="inline">
+					<input type="text" maxlength="3">
+					<span>###</span>
 				</div>
-				<div class="col-2">
-					<input type="text">
-					<p>City</p>
+				<span class="inline">-</span>
+				<div class="inline">
+					<input type="text" maxlength="3">
+					<span>###</span>
 				</div>
-				<div class="col-2">
-					<input type="text">
-					<p>State / Province / Region</p>
-				</div>
-				<div class="col-2">
-					<input type="text">
-					<p>Postal / Zip Code</p>
-				</div>
-				<div class="col-2">
-					<select></select>
-					<p>Country</p>
+				<span class="inline">-</span>
+				<div class="inline">
+					<input type="text" maxlength="4">
+					<span>####</span>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-2 input-date">
-					<label>Home Phone</label>
-					<div class="inline">
-						<input type="text" maxlength="3">
-						<p>###</p>
-					</div>
-					<span class="inline">-</span>
-					<div class="inline">
-						<input type="text" maxlength="3">
-						<p>###</p>
-					</div>
-					<span class="inline">-</span>
-					<div class="inline">
-						<input type="text" maxlength="4">
-						<p>####</p>
-					</div>
+			<div class="col-2 input-date">
+				<label>Work Phone</label>
+				<div class="inline">
+					<input type="text" maxlength="3">
+					<span>###</span>
 				</div>
-				<div class="col-2 input-date">
-					<label>Work Phone</label>
-					<div class="inline">
-						<input type="text" maxlength="3">
-						<p>###</p>
-					</div>
-					<span class="inline">-</span>
-					<div class="inline">
-						<input type="text" maxlength="3">
-						<p>###</p>
-					</div>
-					<span class="inline">-</span>
-					<div class="inline">
-						<input type="text" maxlength="4">
-						<p>####</p>
-					</div>
+				<span class="inline">-</span>
+				<div class="inline">
+					<input type="text" maxlength="3">
+					<span>###</span>
+				</div>
+				<span class="inline">-</span>
+				<div class="inline">
+					<input type="text" maxlength="4">
+					<span>####</span>
 				</div>
 			</div>
 		</div>
 
 		<hr/>
 
-		div
+		<h4>Medical Information</h4>
+		<div class="row">
+			<div class="col-1">
+				<label>Hospital /Clinic Preference</label>
+				<input type="text">
+			</div>
+			<div class="col-2">
+				<label>Insurance Company</label>
+				<input type="text">
+			</div>
+			<div class="col-2">
+				<label>Policy Number</label>
+				<input type="text">
+			</div>
+			<div class="col-2">
+				<label>Physician's Name</label>
+				<input type="text">
+			</div>
+			<div class="col-2 input-date">
+				<label>Phone Number</label>
+				<div class="inline">
+					<input type="text" maxlength="3">
+					<p>###</p>
+				</div>
+				<span class="inline">-</span>
+				<div class="inline">
+					<input type="text" maxlength="3">
+					<p>###</p>
+				</div>
+				<span class="inline">-</span>
+				<div class="inline">
+					<input type="text" maxlength="4">
+					<p>####</p>
+				</div>
+			</div>
+			<div class="col-1">
+				<label>Allergies / Special Health Considerations</label>
+				<textarea cols="30" rows="10"></textarea>
+			</div>
+			<div class="row">
+				<div class="col-1">
+					<input type="submit">
+				</div>
+			</div>
+		</div>
 	</form>
 </body>
 </html>

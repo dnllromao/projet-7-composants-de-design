@@ -1,0 +1,44 @@
+footer {
+	background-color: #f7f2e9;
+	overflow: hidden;
+	padding: $padding;
+	color: #918f89;
+	border: 1px solid black;
+	border-bottom-width: 2px; 
+	ul {
+		@include basic-list($padding);
+	}
+	.social-icons {
+		li {
+			&:before{
+				font-family: FontAwesome;
+				display: inline;
+			}
+
+			&:first-child{
+				&:before{
+					content: '\f0e0';
+				}
+			}
+
+			&:nth-child(2){
+				&:before{
+					content: '\f09a';
+				}
+			}
+
+			&:nth-child(3){
+				&:before{
+					content: '\f099';
+				}
+			}
+
+			&:last-child{
+				&:before{
+					content: '\f030';
+				}
+			}
+		}
+
+	}
+}
