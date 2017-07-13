@@ -1,17 +1,21 @@
 @import '_reset.scss';
 
+
+// Variables
+
 $padding: 1em;
 $inputbreakspace: 7px;
 
-$paginationbackcolor: #e3e3e3;
-$pagescolor: #39424d;
-$pagesfocus: #13a1e8;
-$pageswidth: 3em;
-$borderradius: 6px;
-
+* {
+	box-sizing: border-box;
+}
 
 // Pseudo grid , do I neeed this shift
+
 .row {
+	border-bottom: 1px solid black;
+	padding-top: 0.2em;
+	padding-bottom: 0.7em;
 	&:after {
 	content: '';
 	display: block;
@@ -21,45 +25,52 @@ $borderradius: 6px;
 
 div[class^="col"] {
 	float: left;
-	padding-left: $padding;
-	margin-bottom: 12px;
+	padding-top: 0.55em;
+	padding-left:1.5em;
+	/* margin-right: 0.4em; */
+	background: red;
+	padding-right: 0.8em;
 }
 
-.col-1 {
+.col-full {
 	width: 100%;
+	clear: both;
+	float: none;
+	padding-right: 0.8em;
 }
-.col-2 {
-	width: calc(100% / 2 - #{$padding});
-}
-.col-4 {
-	width: calc(100% / 4 - #{$padding});
-}
-
-// Helpers
-.left {
-	float: left;
-}
-.right {
-	float: right;
-}
-.inline {
-	display: inline-block;
+.col-50 {
+	width: calc(100% / 2 );
 }
 
-// Same shuft like always
 
-@mixin basic-list($pad) {
-	list-style: none;
-	padding-left: $pad;
-	li {
-		display: inline-block;
-		padding: $pad / 2;
-	}
+
+.form-wrap {
+	width: 64%;
+	width: 635px;
+	margin: 0 auto;
+	border: 1px solid black;
+	font-size: 14px;
 }
 
 form {
 
-	input, textarea {
+	
+	h3 {
+		font-size: 1.6em;
+		font-weight: bold;
+		margin-top: 0.75em;
+		margin-bottom: 0.4em;
+		padding-left: 1em;	
+	}
+
+	h4 {
+		padding-left: 1em;
+		font-size: 1.2em;
+		margin-top: 0.75em;
+		font-weight: bold;
+	}
+
+	input, select, textarea {
 		width: 100%;
 	}
 
@@ -67,76 +78,57 @@ form {
 		width: auto;
 	}
 
+	input, select {
+		height: 23px;
+	}
+
+	div[class^="col"].single {
+		margin-right: 50%;
+	}
+
+	.input-group {
+		div[class^="col"] {
+			padding: 0;
+			margin-right: 0.3em;
+		}
+
+		.col-50 {
+			width: 40%;
+		}
+		.col-25 {
+			width: 24%;
+		}
+		.col-12 {
+			width: 12%;
+		}
+		.col-10 {
+			width:10%;
+		}
+		.col-8 {
+			width: 6%;
+		}
+		.character {
+			float: left;
+			font-size: 23px;
+			width: 5%;
+			text-align: center;
+		}
+
+	}
+
+
 	label {
 		display: block;
 		font-weight: bold;
+		margin: 0.3em 0;
 	}
 
-	select {
-		width: 100%;
-	}
-
-	.inline {
-		display: inline-block;
-		vertical-align: top;
-		input {
-			width: calc(100% - #{$inputbreakspace});
-		}
-	}
-
-	.input-date .inline > input {
-		width: 30px;
-	}
-	.input-date .inline:last-child > input {
-		width: 60px;
-	}
-
-	h3, h4 {
-		padding-left: $padding;
-	}
-
-	span {
-		display: block;
+	p {
 		font-size: 0.8em;
+		margin: 0.6em 0;
 	}
 
 }
 
-@import 'footer.scss';
 
-.pagination {
-	background-color: $paginationbackcolor;
-	text-align: center;
-	ul {
-		@include basic-list($padding);
-		padding: $padding;
-	}
 
-	li {
-		background-color: $pagescolor;
-		width: $pageswidth;
-		border-radius: $borderradius;
-	}
-
-	li.focus {
-		background-color: $pagesfocus;
-	}
-
-	li.transparent {
-		background-color: transparent;	
-	}
-	
-}
-
-.zone {
-	.img-wrap {
-		text-align: center;
-	}
-
-	h4 {
-		font-size: 1.7em;
-		font-weight: 100;
-		margin: 1em 0;
-		color: #22cc22;
-	}
-}
