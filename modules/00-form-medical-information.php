@@ -1,17 +1,17 @@
-<div class="form-wrap">
-	<form>
-		<div class="row">
-			<h3>Emergency Contact and Medical Information</h3>
-		</div>
-		
+<form class="container">
+	<div class="title">
+		<h3>Emergency Contact and Medical Information</h3>
+	</div>
+	
+	<div class="group">
 		<div class="row">
 			<div class="col-50 input-group single">
 				<label>Name</label>
-				<div class="col-25">
+				<div class="col-24">
 					<input type="text">
 					<p>First</p>
 				</div>
-				<div class="col-50">
+				<div class="col-41">
 					<input type="text">
 					<p>Last</p>
 				</div>
@@ -22,34 +22,36 @@
 					<option>Male</option>
 				</select>
 			</div>
-			<div class="col-50 input-group">
+			<div class="col-50 input-group complex">
 				<label>Date of birth</label>
-				<div class="col-8">
+				<div class="col-7">
 					<input type="text" maxlength="2">
 					<p>MM</p>
 				</div>
-				<div class="character">/</div>
-				<div class="col-8">
+				<div class="divider">/</div>
+				<div class="col-7">
 					<input type="text" maxlength="2">
 					<p>DD</p>
 				</div>
-				<div class="character">/</div>
-				<div class="col-12">
+				<div class="divider">/</div>
+				<div class="col-13">
 					<input type="text" maxlength="4">
 					<p>YYYY</p>
 				</div>
 			</div>
 		</div>
-
+	</div>
+	
+	<div class="group">
+		<h4>Emergency Contact</h4>
 		<div class="row">
-			<h4>Emergency Contact</h4>
 			<div class="col-50 input-group">
 				<label>Name</label>
-				<div class="col-25">
+				<div class="col-24">
 					<input type="text">
 					<p>First</p>
 				</div>
-				<div class="col-50">
+				<div class="col-41">
 					<input type="text">
 					<p>Last</p>
 				</div>
@@ -83,46 +85,47 @@
 				<select></select>
 				<p>Country</p>
 			</div>
-			<div class="col-50 input-group">
+			<div class="col-50 input-group complex lower">
 				<label>Home Phone</label>
 				<div class="col-10">
 					<input type="text" maxlength="3">
 					<p>###</p>
 				</div>
-				<span class="character">-</span>
+				<span class="divider">-</span>
 				<div class="col-10">
 					<input type="text" maxlength="3">
 					<p>###</p>
 				</div>
-				<span class="character">-</span>
-				<div class="col-10">
+				<span class="divider">-</span>
+				<div class="col-13">
 					<input type="text" maxlength="4">
 					<p>####</p>
 				</div>
 			</div>
-			<div class="col-50 input-group">
+			<div class="col-50 input-group complex lower">
 				<label>Work Phone</label>
 				<div class="col-10">
 					<input type="text" maxlength="3">
 					<p>###</p>
 				</div>
-				<span class="character">-</span>
+				<span class="divider">-</span>
 				<div class="col-10">
 					<input type="text" maxlength="3">
 					<p>###</p>
 				</div>
-				<span class="character">-</span>
-				<div class="col-10">
+				<span class="divider">-</span>
+				<div class="col-13">
 					<input type="text" maxlength="4">
 					<p>####</p>
 				</div>
 			</div>
 		</div>
+	</div>
 
-
-		
+	<div class="group">
+		<h4>Medical Information</h4>
 		<div class="row">
-			<h4>Medical Information</h4>
+			
 			<div class="col-full">
 				<label>Hospital /Clinic Preference</label>
 				<input type="text">
@@ -139,33 +142,32 @@
 				<label>Physician's Name</label>
 				<input type="text">
 			</div>
-			<div class="col-50 input-group">
+			<div class="col-50 input-group complex">
 				<label>Phone Number</label>
 				<div class="col-10">
 					<input type="text" maxlength="3">
 					<p>###</p>
 				</div>
-				<span class="character">-</span>
+				<span class="divider">-</span>
 				<div class="col-10">
 					<input type="text" maxlength="3">
 					<p>###</p>
 				</div>
-				<span class="character">-</span>
-				<div class="col-10">
+				<span class="divider">-</span>
+				<div class="col-13">
 					<input type="text" maxlength="4">
 					<p>####</p>
 				</div>
 			</div>
 			<div class="col-full">
 				<label>Allergies / Special Health Considerations</label>
-				<textarea cols="30" rows="10"></textarea>
+				<textarea cols="30" rows="9"></textarea>
 			</div>
-			<div class="row">
-				<div class="col-full">
-					<input type="submit">
-				</div>
+			<div class="col-full">
+				<input type="submit">
 			</div>
 		</div>
-	</form>
-</div>
+	</div>
+</form>
+
 

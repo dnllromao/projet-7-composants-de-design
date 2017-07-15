@@ -1,131 +1,127 @@
+// Reset
 @import '_reset.scss';
 
 
 // Variables
+$default-font-size: 1rem;
+$headings-3: 1.5em;
+$headings-4: 1.1em;
 
-$padding: 1em;
-$inputbreakspace: 7px;
-
-* {
-	box-sizing: border-box;
+// Global settings
+h3 {
+	font-size: $headings-3;
+	margin: 0.75em 0;
 }
 
-// Pseudo grid , do I neeed this shift
-
-.row {
-	border-bottom: 1px solid black;
-	padding-top: 0.2em;
-	padding-bottom: 0.7em;
-	&:after {
-	content: '';
-	display: block;
-	clear: both;
-	}
+h4 {
+	font-size: $headings-4;
+	margin-top: 0.8em;
+}
+h3, h4 {
+	font-weight: bold;
 }
 
-div[class^="col"] {
-	float: left;
-	padding-top: 0.55em;
-	padding-left:1.5em;
-	/* margin-right: 0.4em; */
-	background: red;
-	padding-right: 0.8em;
+// Grid
+@import 'mixin.scss';
+
+$padding-horizontal: 1.2em;
+$padding-vertical: 0.85em;
+$divisions: 3;
+$gutter: 1.9em;
+
+.container {
+	@include grid($padding-horizontal, $padding-vertical, $gutter, $divisions);
 }
 
-.col-full {
-	width: 100%;
-	clear: both;
-	float: none;
-	padding-right: 0.8em;
-}
-.col-50 {
-	width: calc(100% / 2 );
-}
-
-
-
-.form-wrap {
-	width: 64%;
-	width: 635px;
-	margin: 0 auto;
-	border: 1px solid black;
-	font-size: 14px;
-}
 
 form {
+	width: 64%;
+	margin: 0 auto;
+	border: 1px solid black;
+	font-size: $default-font-size;
 
-	
-	h3 {
-		font-size: 1.6em;
-		font-weight: bold;
-		margin-top: 0.75em;
-		margin-bottom: 0.4em;
-		padding-left: 1em;	
+	.title{
+		border-bottom: 1px solid black;
 	}
 
-	h4 {
-		padding-left: 1em;
-		font-size: 1.2em;
-		margin-top: 0.75em;
-		font-weight: bold;
+	.group {
+		@extends .title;
+		&:last-child {
+			border-bottom: none;
+		};
 	}
 
 	input, select, textarea {
 		width: 100%;
+		box-sizing: border-box;
+		margin-top: 0.8em;
 	}
 
 	input[type="submit"] {
 		width: auto;
 	}
 
-	input, select {
-		height: 23px;
+	input, select, .divider {
+		line-height: 1.25em;
 	}
 
-	div[class^="col"].single {
-		margin-right: 50%;
+	select {
+		height: 1.7em;
 	}
-
-	.input-group {
-		div[class^="col"] {
-			padding: 0;
-			margin-right: 0.3em;
-		}
-
-		.col-50 {
-			width: 40%;
-		}
-		.col-25 {
-			width: 24%;
-		}
-		.col-12 {
-			width: 12%;
-		}
-		.col-10 {
-			width:10%;
-		}
-		.col-8 {
-			width: 6%;
-		}
-		.character {
-			float: left;
-			font-size: 23px;
-			width: 5%;
-			text-align: center;
-		}
-
-	}
-
 
 	label {
 		display: block;
 		font-weight: bold;
-		margin: 0.3em 0;
+		margin-top: 0.8em;
+		&~input, &~select, &~textarea{
+			margin-top: 0.35em;
+		}
 	}
 
 	p {
 		font-size: 0.8em;
-		margin: 0.6em 0;
+		margin: 0.3em 0 0.4em;
+	}
+
+	.input-group {
+
+		input {
+			margin-top: 0.35em;
+		}
+
+		div[class^="col"] {
+			margin-left: 0;
+			margin-right: 0.3em;
+		}
+
+		@each $width in 41, 24, 13, 10, 7 {
+			.col-#{$width} {
+				width: percentage($width / 100);
+			}
+		}
+
+		.divider {
+			float: left;
+			width: 5%;
+			margin-top: 0.35em;
+			margin-right: 0.1em;
+		}
+
+		
+
+		&.complex {
+			div[class^="col"] {
+				margin-right: 0;
+			}
+			p, .divider {
+				text-align: center;
+			}
+		}
+
+		&.lower {
+			margin-top: 0.4em;
+		}
+
 	}
 
 }
